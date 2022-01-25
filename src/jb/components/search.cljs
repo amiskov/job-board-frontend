@@ -13,7 +13,7 @@
 (defn handle-search [ev]
   (.preventDefault ev)
   (GET (str BACKEND-URL "/search")
-       {:headers {"Accept" "application/transit+json"}
+       {:headers {"Accept" "application/transit+json" "Access-Control-Allow-Origin" "*"}
         :params  {:query @query}
         :handler handle-search-resp}))
 
