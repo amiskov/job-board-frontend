@@ -1,0 +1,26 @@
+{
+  "name": "job-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "shadow-cljs watch app --config-merge config/dev.edn",
+    "release": "shadow-cljs release app --config-merge config/prod.edn",
+    "pom": "shadow-cljs pom",
+    "clean": "rm -rf target && rm -rf public/js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "shadow-cljs": "^2.16.12"
+  },
+  "dependencies": {
+    "algoliasearch": "^4.12.0",
+    "less": "^4.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-instantsearch-dom": "^6.21.0"
+  }
+}

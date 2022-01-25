@@ -1,0 +1,198 @@
+html, body {
+  height: 100%;
+  color: #4a4a4a;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #EAECF2;
+}
+
+form * {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  background: white;
+  padding: 20px;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  color: #454E54;
+  letter-spacing: 2px;
+
+  &__img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 34px;
+  }
+
+  &__text {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 12px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  &__text-top {
+    font-weight: bold;
+  }
+
+}
+
+.total-found {
+  margin: 20px 20px -10px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #6E7F89;
+}
+
+.search {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 50px;
+
+  &__text {
+    padding: 0 0 0 30px;
+    border: 1px solid #a9b7be;
+    outline-color: #454E54;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    background: 8px center no-repeat url(../img/icon_search.svg);
+    background-size: auto 45%;
+  }
+}
+
+.job-list {
+}
+
+.job {
+  box-shadow: 0 4px 8px rgb(0 0 0 / 8%);
+  background: #FFF;
+  margin: 20px;
+  padding: 24px;
+  border-radius: 5px;
+
+  &__top {
+    display: flex;
+  }
+
+  &__thumb {
+    img {
+      width: 42px;
+    }
+  }
+
+  &__position {
+    margin-left: 20px;
+  }
+
+  &__company {
+    color: #728088;
+    font-size: 14px;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: #454E54;
+    line-height: 24px;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  &__tagline {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    color: #454E54;
+    font-size: 14px;
+  }
+
+  &__remuneration {
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  &__time {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  &__modified {
+    margin-left: 20px;
+  }
+
+  &__company-size {
+    margin-left: 20px;
+  }
+
+  &__perks {
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    li {
+      display: inline-block;
+      background: #DAF3F2;
+      height: 26px;
+      line-height: 26px;
+      padding: 5px 12px;
+      border-radius: 2px;
+      color: #1aaea8;
+    }
+  }
+
+  &__tags {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      background: #ffe9e7;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: #ef8374;
+      padding: 3px 5px;
+      margin: 0 3px 0 0;
+      font-weight: 400;
+    }
+  }
+
+  &__actions {
+    .btn_outline {
+      margin-right: 20px;
+    }
+  }
+}
+
+.btn {
+  border: 1px solid #ef8374;
+  border-radius: 4px;
+  font-size: 13px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+
+  &_outline {
+    color: #ef8374;
+  }
+
+  &_primary {
+    background: #ef8374;
+    color: white;
+  }
+}
+
+// Utilities
+.hidden {
+  display: none;
+}

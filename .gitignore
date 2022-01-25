@@ -1,0 +1,8 @@
+node_modules/
+.shadow-cljs/
+.idea/
+public/js/
+public/css/*.map
+pom.xml
+notes.md
+resources/resp.json
