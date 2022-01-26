@@ -9,7 +9,6 @@
      [:li.job__tag (:label t)])])
 
 (defn job-card [job]
-  (prn (:remuneration job))
   (let [job-url (str outer-url (:slug job))]
     [:div.job
      [:a.job__top{:href job-url}

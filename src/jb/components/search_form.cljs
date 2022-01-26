@@ -14,7 +14,7 @@
     {:action    "/search"
      :on-submit handle-search}
     [:input.search__text
-     {:type        "search"
+     {:type        "text"
       :placeholder "Search..."
       :value       (:query @ui-state)
       :on-change   #(swap! ui-state assoc :query (.. % -target -value))}]

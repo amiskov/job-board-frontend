@@ -16,4 +16,5 @@
 
                       :devtools        {:http-root "public"
                                         :watch-dir "public"
+                                        :http-host "0.0.0.0"
                                         :http-port 8000}}}}

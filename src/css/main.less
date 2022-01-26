@@ -1,5 +1,9 @@
+@phone: ~"screen and (max-width: 768px)";
+@small: ~"screen and (min-width: 769px)";
+@desktop: ~"screen and (min-width: 960px)";
+@large: ~"screen and (min-width: 1800px)";
+
 html, body {
-  height: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: #4a4a4a;
@@ -8,6 +12,10 @@ html, body {
   padding: 0;
   margin: 0;
   background: #EAECF2;
+}
+
+body {
+  padding-bottom: 30px;
 }
 
 form * {
@@ -53,9 +61,15 @@ form * {
 }
 
 .search {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 50px;
+  margin: 20px 0 0;
+  width: 100%;
+
+  @media @small {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 50px;
+    max-width: 300px;
+  }
 
   &__text {
     padding: 0 0 0 30px;
@@ -66,6 +80,8 @@ form * {
     border-radius: 4px;
     background: 8px center no-repeat url(../img/icon_search.svg);
     background-size: auto 45%;
+    box-sizing: border-box;
+    width: 100%;
   }
 }
 
@@ -79,9 +95,12 @@ form * {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  padding-bottom: 50px;
-}
 
+  @media @desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 .job {
   box-sizing: border-box;
@@ -90,6 +109,10 @@ form * {
   margin: 0 0 24px;
   padding: 24px;
   border-radius: 5px;
+
+  @media @desktop {
+    width: 49%;
+  }
 
   &__top {
     display: flex;
@@ -234,7 +257,7 @@ form * {
 
   &__item {
     display: inline-block;
-    margin: 0 5px 0 0;
+    margin: 0 5px 5px 0;
   }
 
   &__link {
@@ -264,13 +287,3 @@ form * {
   }
 }
 
-@media (min-width: 900px) {
-  .job-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .job {
-    width: 49%;
-  }
-}
