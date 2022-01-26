@@ -1,5 +1,7 @@
 html, body {
   height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   color: #4a4a4a;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -14,7 +16,7 @@ form * {
 
 .header {
   background: white;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .logo {
@@ -44,7 +46,7 @@ form * {
 }
 
 .total-found {
-  margin: 20px 20px -10px;
+  margin: 20px 0 5px;
   font-size: 14px;
   line-height: 22px;
   color: #6E7F89;
@@ -67,18 +69,36 @@ form * {
   }
 }
 
-.job-list {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
+.job-list {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+
 .job {
+  box-sizing: border-box;
   box-shadow: 0 4px 8px rgb(0 0 0 / 8%);
   background: #FFF;
-  margin: 20px;
+  margin: 0 0 24px;
   padding: 24px;
   border-radius: 5px;
 
   &__top {
     display: flex;
+    text-decoration: none;
+    margin-bottom: 12px;
+  }
+
+  &__top:hover &__title {
+    color: #ef8374;
   }
 
   &__thumb {
@@ -167,6 +187,8 @@ form * {
   }
 
   &__actions {
+    text-align: right;
+
     .btn_outline {
       margin-right: 20px;
     }
@@ -181,6 +203,13 @@ form * {
   height: 40px;
   line-height: 40px;
   padding: 0 40px;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    background: #fceae8;
+    color: #ef8374;
+  }
 
   &_outline {
     color: #ef8374;
@@ -232,5 +261,16 @@ form * {
       background: #e8e8e8;
       transition: background-color .2s, color .2s;
     }
+  }
+}
+
+@media (min-width: 900px) {
+  .job-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .job {
+    width: 49%;
   }
 }

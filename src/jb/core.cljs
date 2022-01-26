@@ -12,12 +12,14 @@
 (defn app []
   [:main
    [:div.header
-    [logo]
-    [search]]
-   [pagination]
-   (when-let [qty (:nb-hits @db)]
-     [:p.total-found (str "We found " qty " jobs matching your criteria")])
-   [hits (:hits @db)]])
+    [:div.container
+      [logo]
+      [search]]]
+   [:div.container
+     [pagination]
+     (when-let [qty (:nb-hits @db)]
+       [:p.total-found (str "We found " qty " jobs matching your criteria")])
+     [hits (:hits @db)]]])
 
 ;; start is called by init and after code reloading finishes
 (defn ^:dev/after-load start []
