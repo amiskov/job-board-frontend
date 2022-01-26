@@ -1,6 +1,8 @@
 html,
 body {
   height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   color: #4a4a4a;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -13,7 +15,7 @@ form * {
 }
 .header {
   background: white;
-  padding: 20px;
+  padding: 20px 0;
 }
 .logo {
   display: inline-block;
@@ -37,7 +39,7 @@ form * {
   font-weight: bold;
 }
 .total-found {
-  margin: 20px 20px -10px;
+  margin: 20px 0 5px;
   font-size: 14px;
   line-height: 22px;
   color: #6E7F89;
@@ -57,18 +59,35 @@ form * {
   background: 8px center no-repeat url(../img/icon_search.svg);
   background-size: auto 45%;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.job-list {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
 .job {
+  box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   background: #FFF;
-  margin: 20px;
+  margin: 0 0 24px;
   padding: 24px;
   border-radius: 5px;
 }
 .job__top {
   display: flex;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+.job__top:hover .job__title {
+  color: #ef8374;
 }
 .job__thumb img {
-  width: 42px;
+  max-width: 42px;
 }
 .job__position {
   margin-left: 20px;
@@ -136,6 +155,9 @@ form * {
   margin: 0 3px 0 0;
   font-weight: 400;
 }
+.job__actions {
+  text-align: right;
+}
 .job__actions .btn_outline {
   margin-right: 20px;
 }
@@ -147,6 +169,12 @@ form * {
   height: 40px;
   line-height: 40px;
   padding: 0 40px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover {
+  background: #fceae8;
+  color: #ef8374;
 }
 .btn_outline {
   color: #ef8374;
@@ -157,5 +185,47 @@ form * {
 }
 .hidden {
   display: none;
+}
+.pagination {
+  margin: 2em 24px 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.pagination__item {
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+.pagination__link {
+  display: inline-block;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: white;
+  text-decoration: none;
+  border: solid 1px #dbdbdb;
+  border-radius: 2px;
+  font-size: 11px;
+  color: #c5c6c5;
+}
+.pagination__link_active {
+  border-color: #6E7F89;
+  background-color: #6E7F89;
+  color: white;
+}
+.pagination__link:hover {
+  background: #e8e8e8;
+  transition: background-color 0.2s, color 0.2s;
+}
+@media (min-width: 900px) {
+  .job-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .job {
+    width: 49%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
