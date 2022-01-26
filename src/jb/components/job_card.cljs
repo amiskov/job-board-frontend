@@ -11,7 +11,7 @@
 (defn job-card [job]
   (let [job-url (str outer-url (:slug job))]
     [:div.job
-     [:a.job__top{:href job-url}
+     [:a.job__top {:href job-url}
       [:div.job__thumb [:img {:src (:logo job)}]]
       [:div.job__position
        [:div.job__title (:title job)]
@@ -23,7 +23,9 @@
       [:span.job__time (:role-type job)]
       [:span.job__modified (:last-modified-human job)]
       [:span.job__company-size (:company-size job)]]
-     [:ul.job__perks (when (:remote job) [:li "Remote"])]
+     [:ul.job__perks
+      (when (:remote job) [:li.job__perk "Remote"])
+      (when (:sponsorship-offered job) [:li.job__perk "Sponsored"])]
      [:div.job__actions
       [:a.btn.btn_outline {:href job-url} "More Info"]
       [:a.btn.btn_primary {:href job-url} "Apply"]]]))
