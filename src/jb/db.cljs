@@ -8,3 +8,6 @@
 ;                 (js->clj :keywordize-keys true)))
 
 (def db (r/atom {}))
+
+(def ui-state (r/atom {:query      ""
+                       :query-page 0}))

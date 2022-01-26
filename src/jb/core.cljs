@@ -5,7 +5,7 @@
     [jb.db :refer [db]]
     ;; components
     [jb.components.logo :refer [logo]]
-    [jb.components.search :refer [search]]
+    [jb.components.search-form :refer [search]]
     [jb.components.pagination :refer [pagination]]
     [jb.components.hits :refer [hits]]))
 
