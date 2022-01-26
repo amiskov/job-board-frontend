@@ -6,6 +6,7 @@
     ;; components
     [jb.components.logo :refer [logo]]
     [jb.components.search :refer [search]]
+    [jb.components.pagination :refer [pagination]]
     [jb.components.hits :refer [hits]]))
 
 (defn app []
@@ -13,6 +14,7 @@
    [:div.header
     [logo]
     [search]]
+   [pagination]
    (when-let [qty (:nb-hits @db)]
      [:p.total-found (str "We found " qty " jobs matching your criteria")])
    [hits (:hits @db)]])

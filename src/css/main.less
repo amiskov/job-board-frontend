@@ -196,3 +196,41 @@ form * {
 .hidden {
   display: none;
 }
+
+.pagination {
+  margin: 2em 24px 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: white;
+    text-decoration: none;
+    border: solid 1px #dbdbdb;
+    border-radius: 2px;
+    font-size: 11px;
+    color: #c5c6c5;
+
+    &_active {
+      border-color: #6E7F89;
+      background-color: #6E7F89;
+      color: white;
+    }
+
+    &:hover {
+      background: #e8e8e8;
+      transition: background-color .2s, color .2s;
+    }
+  }
+}
