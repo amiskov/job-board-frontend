@@ -70,6 +70,10 @@ form * {
   box-sizing: border-box;
   width: 100%;
 }
+.search__text:disabled {
+  background: 95% center / 20px no-repeat lightgray url(../img/loading.svg);
+  color: #6E7F89;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
