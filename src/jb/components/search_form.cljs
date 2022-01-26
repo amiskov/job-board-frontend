@@ -6,6 +6,7 @@
 
 (defn handle-search [ev]
   (.preventDefault ev)
+  (swap! ui-state assoc :search-in-progress true)
   (search/send-request))
 
 (defn search []
@@ -15,6 +16,8 @@
      :on-submit handle-search}
     [:input.search__text
      {:type        "text"
+      :auto-focus  true
+      :disabled    (:search-in-progress @ui-state)
       :placeholder "Search..."
       :value       (:query @ui-state)
       :on-change   #(swap! ui-state assoc :query (.. % -target -value))}]
